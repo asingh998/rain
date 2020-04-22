@@ -12,7 +12,10 @@ $f3 = Base::instance();
 
 //Default route
 $f3->route('GET /', function() {
-    echo '<h1>It is raining today.</h1>';
+    //echo '<h1>It is raining today.</h1>';
+
+    $views = new Template();
+    echo $views->render('views/home.html');
 });
 
 //Run F3
